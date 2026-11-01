@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Kelimeler">
+    <meta name="theme-color" content="#F2F2F7">
+    <title>Kelime Kartlari</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="top-bar">
+            <span class="badge" id="mode-badge">Normal</span>
+            <span class="badge" id="dir-badge">DE &rarr; TR</span>
+            <span class="badge" id="progress-badge">0 / 0</span>
+        </div>
+
+        <div class="card">
+            <div class="word" id="word">Yukleniyor...</div>
+            <div class="examples" id="examples"></div>
+            <div class="answer" id="answer"></div>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-primary" id="btn-show">Cevabi Goster</button>
+            <div class="btn-pair hidden" id="result-btns">
+                <button class="btn btn-danger" id="btn-wrong">Bilemedim</button>
+                <button class="btn btn-success" id="btn-correct">Bildim</button>
+            </div>
+        </div>
+
+        <div class="nav-row">
+            <button class="nav-btn" id="btn-prev">&larr;</button>
+            <button class="nav-btn" id="btn-dir">DE &rarr; TR</button>
+            <button class="nav-btn" id="btn-mode">Normal</button>
+            <button class="nav-btn nav-btn-small" id="btn-menu">&hellip;</button>
+        </div>
+
+        <div class="stats-bar">
+            <span>Bu: <b id="s-c">0</b>&check; <b id="s-w">0</b>&cross;</span>
+            <span>Toplam: <b id="s-total">0</b> &middot; <b id="s-correct">0</b>&check; <b id="s-hard">0</b>&cross;</span>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="sheet" id="menu-sheet">
+        <div class="sheet-handle"></div>
+        <div class="sheet-group">
+            <button class="sheet-btn" id="m-report">Hatali Kelime Bildir</button>
+            <button class="sheet-btn" id="m-wrong-download">Hatali Kelimeleri Indir</button>
+        </div>
+        <div class="sheet-group">
+            <button class="sheet-btn" id="m-stats">Istatistikleri Yonet</button>
+        </div>
+        <div class="sheet-group">
+            <button class="sheet-btn sheet-cancel" id="m-close">Kapat</button>
+        </div>
+    </div>
+
+    <div class="sheet" id="stats-sheet">
+        <div class="sheet-handle"></div>
+        <div class="sheet-group">
+            <button class="sheet-btn sheet-danger" id="s-reset">Sifirla ve Yeni Basla</button>
+        </div>
+        <div class="sheet-group" id="profiles-list"></div>
+        <div class="sheet-group">
+            <button class="sheet-btn sheet-cancel" id="s-back">Geri</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

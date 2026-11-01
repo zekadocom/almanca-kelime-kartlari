@@ -1,0 +1,10 @@
+{
+  "name": "Kelime Kartlari",
+  "short_name": "Kelimeler",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F2F2F7",
+  "theme_color": "#F2F2F7",
+  "lang": "tr"
+}
